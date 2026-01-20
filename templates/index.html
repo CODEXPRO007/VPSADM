@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Create New Paste</h2>
+<form method="post" action="/create">
+<textarea name="content" rows="12" cols="70"></textarea><br>
+
+<select name="language">
+<option>text</option>
+<option>lua</option>
+<option>python</option>
+</select>
+
+<select name="expire">
+<option value="never">Never</option>
+<option value="10m">10 Minutes</option>
+<option value="1h">1 Hour</option>
+<option value="1d">1 Day</option>
+</select>
+
+<input type="password" name="password" placeholder="Password (optional)">
+<br><button>Create Paste</button>
+</form>
+</body>
+</html>

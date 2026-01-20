@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h3>Paste</h3>
+<pre>{{ paste.content }}</pre>
+
+<form method="post" action="/raw/{{paste.paste_id}}">
+{% if paste.password %}
+<input type="password" name="password" placeholder="Password">
+{% endif %}
+<button>View RAW</button>
+</form>
+</body>
+</html>
