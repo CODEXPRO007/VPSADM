@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Paste</title>
+<style>
+body{font-family:monospace;background:#020617;color:#22d3ee}
+pre{white-space:pre-wrap}
+a{color:#38bdf8}
+</style>
+</head>
 <body>
-<h3>Paste</h3>
+
+<h3>Paste ID: {{ paste.paste_id }}</h3>
+
+<a href="/raw/{{ paste.paste_id }}" target="_blank">🔗 View RAW</a>
+
+<hr>
+
 <pre>{{ paste.content }}</pre>
 
-<form method="post" action="/raw/{{paste.paste_id}}">
-{% if paste.password %}
-<input type="password" name="password" placeholder="Password">
-{% endif %}
-<button>View RAW</button>
-</form>
 </body>
 </html>
