@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html>
+<head>
+<title>Create Paste</title>
+<style>
+body{font-family:Arial;background:#0f172a;color:#fff}
+textarea{width:100%;height:300px}
+button{padding:10px 20px}
+</style>
+</head>
 <body>
+
 <h2>Create New Paste</h2>
-<form method="post" action="/create">
-<textarea name="content" rows="12" cols="70"></textarea><br>
+
+<form method="post" action="/api/create">
+<textarea name="content" placeholder="Paste your code here"></textarea><br><br>
 
 <select name="language">
-<option>text</option>
-<option>lua</option>
-<option>python</option>
+  <option value="text">Text</option>
+  <option value="lua">Lua</option>
+  <option value="python">Python</option>
 </select>
 
 <select name="expire">
-<option value="never">Never</option>
-<option value="10m">10 Minutes</option>
-<option value="1h">1 Hour</option>
-<option value="1d">1 Day</option>
+  <option value="never">Never</option>
+  <option value="10m">10 Minutes</option>
+  <option value="1h">1 Hour</option>
+  <option value="1d">1 Day</option>
 </select>
 
 <input type="password" name="password" placeholder="Password (optional)">
-<br><button>Create Paste</button>
+<br><br>
+
+<button>Create Paste</button>
 </form>
+
 </body>
 </html>
